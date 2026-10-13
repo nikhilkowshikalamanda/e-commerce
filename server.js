@@ -1109,19 +1109,23 @@ app.get('*', (req, res) => {
 });
 
 // Start Server
-app.listen(PORT, () => {
-  console.log(`=======================================================`);
-  console.log(`🚀 E-Commerce Store Server is running on port ${PORT}`);
-  console.log(`🌐 Local URL: http://localhost:${PORT}`);
-  console.log(`-------------------------------------------------------`);
-  console.log(`🔑 Demo Admin Credentials:`);
-  console.log(`   Email:    admin@eshop.com`);
-  console.log(`   Password: AdminPassword123`);
-  console.log(`-------------------------------------------------------`);
-  console.log(`👤 Demo Customer Credentials:`);
-  console.log(`   Email:    customer@eshop.com`);
-  console.log(`   Password: CustomerPass123`);
-  console.log(`-------------------------------------------------------`);
-  console.log(`💾 Architecture: In-Memory Storage (Resets on restart)`);
-  console.log(`=======================================================`);
-});
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`=======================================================`);
+    console.log(`🚀 E-Commerce Store Server is running on port ${PORT}`);
+    console.log(`🌐 Local URL: http://localhost:${PORT}`);
+    console.log(`-------------------------------------------------------`);
+    console.log(`🔑 Demo Admin Credentials:`);
+    console.log(`   Email:    admin@eshop.com`);
+    console.log(`   Password: AdminPassword123`);
+    console.log(`-------------------------------------------------------`);
+    console.log(`👤 Demo Customer Credentials:`);
+    console.log(`   Email:    customer@eshop.com`);
+    console.log(`   Password: CustomerPass123`);
+    console.log(`-------------------------------------------------------`);
+    console.log(`💾 Architecture: In-Memory Storage (Resets on restart)`);
+    console.log(`=======================================================`);
+  });
+}
+
+module.exports = app;
