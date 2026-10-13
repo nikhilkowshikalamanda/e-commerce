@@ -1,0 +1,23 @@
+{
+  "name": "ecommerce-mini-project",
+  "version": "1.0.0",
+  "description": "Full Stack E-Commerce Shopping Website built with HTML5, CSS3, Vanilla JavaScript, and Express.js (In-Memory Architecture)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": [
+    "ecommerce",
+    "express",
+    "javascript",
+    "college-project",
+    "mini-project"
+  ],
+  "author": "College Mini Project",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "express": "^4.21.2"
+  }
+}
